@@ -194,7 +194,7 @@ class ExpenseController extends Controller
         return Response::download($path, $filename, $headers);
     }
 
-    public function exportToXlsx($expenses)
+    protected function exportToXlsx($expenses)
     {
         $spreadsheet = new Spreadsheet();
         $sheet = $spreadsheet->getActiveSheet();
